@@ -33,7 +33,7 @@ def localidades():
             {
                 "success": True,
                 "message": "Dados recuperados com sucesso.",
-                "data": data,
+                "localidades": data,
             }
         ),
         200,
