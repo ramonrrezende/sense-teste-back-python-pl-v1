@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "dc3b3829-a497-46b7-ac7b-b4dfe1e138ea",
+		"name": "sales_sense",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localidades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/localidades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"localidades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "salva_cep",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "cep",
+							"value": "36033-230",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/cep",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"cep"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

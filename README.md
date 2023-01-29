@@ -1,6 +1,19 @@
 # Teste técnico backend Python pleno
 
 ---
+### EXECUTANDO LOCALMENTE
+
+Para executar o projeto precisamos do docker instalado. As instruções para instalação do docker estam na [documentação de instalação do docker](https://docs.docker.com/engine/install/ubuntu/) e na [documentação de instalação do docker-compose](https://docs.docker.com/compose/install/).
+
+A api pode ser utilizada via postman após importada do arquivo `sales_sense.postman_collection.json`.
+
+O projeto é executado utilizando o comando:
+
+```
+sudo docker-compose up --build --force-recreate
+```
+
+---
 
 Neste repositório você encontra o teste técnico para a vaga de Desenvolvedor(a) Python pleno
 da [Sales Sense](http://salessense.com.br)!

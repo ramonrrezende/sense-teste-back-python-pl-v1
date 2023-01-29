@@ -1,0 +1,36 @@
+services:
+  dados_sense_app:
+    container_name: dados_sense_app
+    build: .
+    command: bash -c "sleep 5 && flask --app api run --host=0.0.0.0"
+    tty: true
+    volumes:
+      - ./app:/app
+    environment:
+      - POSTGRES_HOST=dados_sense_db
+      - POSTGRES_USER=sense_user
+      - POSTGRES_PASSWORD=sup3r_s3cr37
+      - POSTGRES_DB=sense_db
+    depends_on:
+      - dados_sense_db
+    ports:
+      - 5000:5000
+
+  dados_sense_db:
+    image: postgres:12.0-alpine
+    container_name: dados_sense_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      - POSTGRES_USER=sense_user
+      - POSTGRES_PASSWORD=sup3r_s3cr37
+      - POSTGRES_DB=sense_db
+    ports:
+      - 5432:5432
+
+volumes:
+  postgres_data:
+  app:
+
+
