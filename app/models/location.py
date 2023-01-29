@@ -19,6 +19,7 @@ class UFCepLocationError(CepLocationError):
     def __init__(self, *args: object) -> None:
         super().__init__(*args)
 
+
 class Location:
     def __init__(self, cep: str) -> None:
         super().__init__()

@@ -1,6 +1,11 @@
 from flask import Flask, request, jsonify
 from viacep import ViaCepException
-from models.location import CepLocation, Location, UniqueCepLocationError, UFCepLocationError
+from models.location import (
+    CepLocation,
+    Location,
+    UniqueCepLocationError,
+    UFCepLocationError,
+)
 from models.location import *
 
 app = Flask(__name__)
