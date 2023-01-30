@@ -98,7 +98,7 @@ class CepLocation:
                 "uf",
                 "localidade",
                 "logradouro",
-                TO_CHAR("data_consulta", '{self.__db.date_format()}')
+                TO_CHAR("data_consulta", '{self.__db.date_format()}') as "data_consulta"
             from cep_location
             {filter_str}
         """
